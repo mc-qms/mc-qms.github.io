@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manuel Chavez — AI Governance &amp; GxP Quality Systems</title>
+<meta name="description" content="Interactive demos of governed AI for regulated quality work: an adversarial audit agent, a procedure generator, and a complete fictional EDMS.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Manuel Chavez</h1>
+    <p class="title-line">AI Governance &amp; GxP Quality Systems</p>
+    <p class="intro">
+      Fourteen years in GMP quality — QC, investigations, and quality systems — now applied to a
+      newer problem: how do you let AI agents do real work in a regulated environment without
+      letting them make things up? Everything below is live. Click in and try to break it.
+    </p>
+    <p class="links">
+      <a href="https://www.linkedin.com/in/manuel-chavez-b9263619">LinkedIn</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://github.com/mc-qms">GitHub</a>
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="method">
+    <h2>How I work</h2>
+    <p>
+      I don&rsquo;t write the code line by line. I set what has to be true, build the checks that
+      prove it, and review and disposition the failures. In quality terms: <em>validate the code,
+      test the instructions, qualify the system.</em> The discipline lives in the deterministic
+      parts — registries, scoring, and verification — so the model only has to do the part it is
+      actually good at. A human with the competence to catch the failure modes makes the final call.
+    </p>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Specify</h3>
+        <p>Named rules and registries define what must be true before anything is generated.</p>
+      </div>
+      <div class="step">
+        <h3>2. Check</h3>
+        <p>Deterministic verification — not vibes. If a claim can&rsquo;t be checked against a source, it doesn&rsquo;t ship.</p>
+      </div>
+      <div class="step">
+        <h3>3. Disposition</h3>
+        <p>A qualified human reviews the flagged gaps and decides. The agent flags; it does not conclude.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibits">
+    <h2>The work</h2>
+    <div class="grid">
+
+      <article class="card">
+        <p class="card-kicker">Procedure generation</p>
+        <h3>The Procedure Machine</h3>
+        <p>
+          Turns public FDA and ICH guidance into draft SOPs and test methods. Source material is
+          fetched and assembled into a fixed packet first; drafting works only from that packet,
+          pauses for a human where the guidance runs out, and finishes with an independent
+          cold-read audit. Two modes: from your documents, or from public regulations.
+        </p>
+        <p class="card-links">
+          <a href="https://procedure-machine.streamlit.app/">Open the live app</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/mc-qms/procedure-machine">Source</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <p class="card-kicker">Proof of concept</p>
+        <h3>Fictitious Labs Inc. — EDMS</h3>
+        <p>
+          The Procedure Machine, pointed at a blank slate: a complete 35-document quality system
+          for a fictional biologics company, generated from ICH, FDA, and CFR sources and adopted
+          into a working document-control system — complete with a superseded method revision,
+          because version traps are where reviewers earn their pay. A framework and a head start,
+          not drop-in controlled documents.
+        </p>
+        <p class="card-links">
+          <a href="https://fictitious-labs-edms.streamlit.app/">Open the live EDMS</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/mc-qms/fictitious-labs-edms">Source</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <p class="card-kicker">Adversarial audit</p>
+        <h3>The Stranger</h3>
+        <p>
+          A cold-read audit agent. It receives a finished draft — a deviation, a report, a
+          procedure — with none of the drafter&rsquo;s context or intentions, and reads it the way
+          a skeptical reviewer would: looking for the gap, the unsupported claim, and the sentence
+          that argues with another section. The human dispositions every finding.
+        </p>
+        <p class="card-links">
+          <a href="https://the-stranger-audit.streamlit.app">Open the live app</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <p class="card-kicker">Framework</p>
+        <h3>Semantic Primitives</h3>
+        <p>
+          The design vocabulary behind the agents above: a registry of named, reusable primitives
+          for governing AI agents in regulated environments — the root words from which constrained
+          instruction sets are built, so expert reasoning survives being compressed into an
+          agent&rsquo;s instruction limit.
+        </p>
+        <p class="card-links">
+          <a href="https://github.com/mc-qms/qms-agent-governance">Read the framework</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <p class="card-kicker">Training simulation</p>
+        <h3>QC Lab Sim — A280</h3>
+        <p>
+          A text-based training simulation of a UV-Vis protein concentration assay in a QC lab.
+          A deterministic core owns the event log — what actually happened, in order — so the
+          debrief can be audited against the record instead of against a model&rsquo;s memory
+          of the session.
+        </p>
+        <p class="card-links">
+          <a href="https://qc-a280-sim.streamlit.app">Open the live sim</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <p class="card-kicker">Utility</p>
+        <h3>Chromeleon Source Companion</h3>
+        <p>
+          A smaller build, made for a former coworker: a companion tool for working through
+          chromatography source data without fighting the native interface. Not every useful
+          agent is a platform — some are just a colleague&rsquo;s annoying afternoon, removed.
+        </p>
+        <p class="card-links">
+          <a href="https://chromeleon-source-companion.streamlit.app/">Open the live app</a>
+        </p>
+      </article>
+
+      <article class="card card-next">
+        <p class="card-kicker">In the works</p>
+        <h3>QA Review Simulator</h3>
+        <p>
+          Review training against the Fictitious Labs library: completed records with planted
+          documentation discrepancies — transcription errors, wrong-version traps, bad
+          corrections — scored deterministically. Flagging compliant entries costs points too,
+          because that&rsquo;s a failure mode in real review as well.
+        </p>
+        <p class="card-links"><span class="soon">Built on the EDMS above · in development</span></p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      Manuel Chavez · San Diego County, California ·
+      <a href="https://www.linkedin.com/in/manuel-chavez-b9263619">LinkedIn</a> ·
+      <a href="https://github.com/mc-qms">GitHub</a>
+    </p>
+    <p class="fine">Fictitious Labs Inc. is, as the name insists, fictitious. Any resemblance to a real quality system is a compliment to both.</p>
+  </div>
+</footer>
+
+</body>
+</html>
