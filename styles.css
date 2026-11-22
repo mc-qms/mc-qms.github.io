@@ -134,3 +134,15 @@ footer .fine { font-size: 0.85rem; margin-top: 6px; }
   .hero h1 { font-size: 1.9rem; }
   .steps, .grid { grid-template-columns: 1fr; }
 }
+
+.card-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: #eef2f5;
+  display: block;
+}

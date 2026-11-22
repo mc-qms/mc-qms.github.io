@@ -59,6 +59,7 @@
 
       <article class="card">
         <p class="card-kicker">Procedure generation</p>
+        <img class="card-img" data-b64="img/procedure-machine.b64" alt="Screenshot of The Procedure Machine app">
         <h3>The Procedure Machine</h3>
         <p>
           Turns public FDA and ICH guidance into draft SOPs and test methods. Source material is
@@ -75,6 +76,7 @@
 
       <article class="card">
         <p class="card-kicker">Proof of concept</p>
+        <img class="card-img" data-b64="img/fictitious-labs-edms.b64" alt="Screenshot of the Fictitious Labs EDMS document library">
         <h3>Fictitious Labs Inc. — EDMS</h3>
         <p>
           The Procedure Machine, pointed at a blank slate: a complete 35-document quality system
@@ -92,6 +94,7 @@
 
       <article class="card">
         <p class="card-kicker">Adversarial audit</p>
+        <img class="card-img" data-b64="img/the-stranger.b64" alt="Screenshot of The Stranger audit app">
         <h3>The Stranger</h3>
         <p>
           A cold-read audit agent. It receives a finished draft — a deviation, a report, a
@@ -106,6 +109,7 @@
 
       <article class="card">
         <p class="card-kicker">Framework</p>
+        <img class="card-img" data-b64="img/semantic-primitives.b64" alt="Screenshot of the Semantic Primitives GitHub repository">
         <h3>Semantic Primitives</h3>
         <p>
           The design vocabulary behind the agents above: a registry of named, reusable primitives
@@ -120,6 +124,7 @@
 
       <article class="card">
         <p class="card-kicker">Training simulation</p>
+        <img class="card-img" data-b64="img/qc-lab-sim.b64" alt="Screenshot of the QC Lab Sim A280 terminal">
         <h3>QC Lab Sim — A280</h3>
         <p>
           A text-based training simulation of a UV-Vis protein concentration assay in a QC lab.
@@ -134,6 +139,7 @@
 
       <article class="card">
         <p class="card-kicker">Utility</p>
+        <img class="card-img" data-b64="img/chromeleon-companion.b64" alt="Screenshot of the Chromeleon Source Companion app">
         <h3>Chromeleon Source Companion</h3>
         <p>
           A smaller build, made for a former coworker: a companion tool for working through
@@ -173,5 +179,14 @@
   </div>
 </footer>
 
+
+  <script>
+    document.querySelectorAll('img[data-b64]').forEach(function (img) {
+      fetch(img.getAttribute('data-b64'))
+        .then(function (r) { return r.text(); })
+        .then(function (b64) { img.src = 'data:image/jpeg;base64,' + b64.trim(); })
+        .catch(function () { img.remove(); });
+    });
+  </script>
 </body>
 </html>
